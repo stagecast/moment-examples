@@ -1,0 +1,71 @@
+[{
+    "fieldGroupClassName": "row",
+    "fieldGroup": [{
+        "key": "pattern",
+        "type": "dropdown",
+        "defaultValue": "soft",
+        "className": "col-6",
+        "wrappers": [
+          "form-field"
+        ],
+        "templateOptions": {
+          "required": true,
+          "hideRequiredMarker": true,
+          "arrayValues": [
+            {"value": "soft", "display": "Soft"},
+            {"value": "hard", "display": "Hard"}
+          ],
+          "labelProp": "display",
+          "valueProp": "value",
+          "label": "Pattern",
+          "description": "Choose a pattern to change fades between colors."
+        }
+      },
+      {
+        "key": "interval",
+        "type": "input",
+        "defaultValue": 1000,
+        "className": "col-6",
+        "wrappers": [
+          "form-field"
+        ],
+        "templateOptions": {
+          "min": 300,
+          "max": 5000,
+          "required": true,
+          "type": "number",
+          "label": "Interval (ms)",
+          "description": "Choose a fixed time interval between the change of color."
+        },
+        "validation": {
+          "messages": {
+            "min": "The min value is 300.",
+            "max": "The max value is 5000."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "key": "colors",
+    "defaultValue":  ["#005aff", "#ffe200"],
+    "type": "color-input",
+    "wrappers": [
+      "form-field"
+    ],
+    "templateOptions": {
+      "advanced": true,
+      "required": true,
+      "label": "Colors",
+      "description": "Use different colors to create entertaining light shows.",
+      "maxLength": 10,
+      "minLenght": 1
+    },
+    "validation": {
+      "messages": {
+        "minLenght": "Select at least 1 color.",
+        "maxLength": "You can select at most 10 colors."
+      }
+    }
+  }
+]

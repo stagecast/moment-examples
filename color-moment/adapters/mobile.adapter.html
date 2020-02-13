@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Coupon Adapter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		
+		<style>
+			body{
+				position:fixed;
+				padding: 0px;
+				margin: 0px;
+				overflow:hidden;
+				height:100vh;
+				width:100vw;
+			}
+			#frame{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top:0;
+				left:0;
+				margin:0;
+				padding:0;
+				overflow: hidden;
+				box-sizing: border-box;
+				border-style: none;
+			}
+        </style>
+	</head>
+	<body>
+		<iframe id="frame" title="Coupon Moment" onload="iframeLoaded()" src="https://stagecast.se/media/color_moment/color/mobile/index.html"></iframe>
+		<script>
+		function iframeLoaded(){
+			document.getElementById("frame").contentWindow.postMessage({
+				messageSource: 'STAGECAST_SDK',
+				config: {
+					environment: (stagecast.getHost() == 'stagecast.se'?'production':'staging'),
+					userId: stagecast.getUserId(),
+					token:stagecast.getToken(),
+					momentClassData: {
+						"custom": {
+						}
+					},
+					momentClassId: stagecast.getMomentClassId(),
+					momentId: stagecast.getMomentId(),
+					eventId: stagecast.getEventId(),
+					coordinates: stagecast.getCoordinates(),
+					isGuest: stagecast.isGuest(),
+					isActive: stagecast.isActive(),
+					isMomentActive: stagecast.isMomentActive()
+				}
+			}, '*');
+		}
+		</script>
+	</body>
+</html>

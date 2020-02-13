@@ -1,0 +1,64 @@
+{
+  "bundleId": "com.stagecast.color",
+  "version": "1.0.2",
+  "category": "special effects",
+  "description": "Make your audience color up in the rhythm of the music.",
+  "tags": [
+    "color",
+    "interaction"
+  ],
+  "template": {
+    "name": "color",
+    "displayName": "Color Moment",
+    "defaultMessage": "",
+    "labels": [
+      "free",
+      "basic"
+    ],
+    "icons": [
+      {
+        "size": 200,
+        "url": "",
+        "name": "color.png",
+        "type": "image/png",
+        "contentId": ""
+      }
+    ],
+    "presentation": {
+      "screenshots": [],
+      "cover": "",
+      "body": "<h2>What the moment does</h2><p>The Color Moment turns the audience's mobile phones into colorful pixels! You can set the colors and the rhythm of change.</p><h2>How to use the Moment at your event</h2><p>Dim the lights in the venue and watch your audience light up the venue in different colors during a musical performance.</p>"
+    },
+    "plugins": [
+      "sponsors"
+    ],
+    "branding": {
+      "brandActivation": true,
+      "theming": false,
+      "defaultTheme": ""
+    },
+    "screens": {
+      "mobile": "mandatory"
+    },
+    "general": {
+      "type": "native",
+      "accessibility": [
+        "stagecast app",
+        "browser",
+        "app integration"
+      ],
+      "hasModeration": false,
+      "isInteractive": true,
+      "isFeedContent": false,
+      "feedItemTitle": "Color",
+      "supportedLanguages": [
+        "en"
+      ]
+    },
+    "provider": {
+      "developer": "Stagecast AB",
+      "org": "Stagecast AB",
+      "support": "support@stagecast.se"
+    }
+  }
+}
