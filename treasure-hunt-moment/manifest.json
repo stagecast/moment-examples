@@ -1,0 +1,67 @@
+{
+  "bundleId": "com.52five.treasure_hunt",
+  "version": "1.0.0",
+  "category": "crowd game",
+  "description": "Complete all quests to win a prize.",
+  "tags": [
+    "treasure hunt",
+    "quest",
+    "game"
+  ],
+  "template": {
+    "name": "treasure hunt",
+    "displayName": "Treasure Hunt",
+    "defaultMessage": "",
+    "labels": [
+      "free",
+      "new"
+    ],
+    "icons": [
+      {
+        "size": 200,
+        "url": "",
+        "name": "treasure_hunt.png",
+        "type": "image/png",
+        "contentId": ""
+      }
+    ],
+    "presentation": {
+      "screenshots": [],
+      "cover": "",
+      "body": "<h2>What the moment does</h2><p>The Treasure Hunt Moment lets you create simple riddles that can only be solved when finding the correct answers around the venue.</p><h2>How to use the Moment at your event</h2><p>Use the Treasure Hunt Moment to incentivice your fans to go around the venue and solve small riddles. All winners receive a prize!</p>"
+    },
+    "plugins": [
+      "sponsors"
+    ],
+    "branding": {
+      "brandActivation": true,
+      "theming": false,
+      "defaultTheme": ""
+    },
+    "screens": {
+      "mobile": "mandatory",
+      "stage": "optional"
+    },
+    "general": {
+      "type": "html",
+      "accessibility": [
+        "stagecast app",
+        "browser",
+        "app integration"
+      ],
+      "hasModeration": false,
+      "isInteractive": true,
+      "isFeedContent": false,
+      "feedItemTitle": "Treasure Hunt",
+      "supportedLanguages": [
+        "en",
+        "de"
+      ]
+    },
+    "provider": {
+      "developer": "52Five",
+      "org": "52Five",
+      "support": "c.simlinger@52five.com"
+    }
+  }
+}

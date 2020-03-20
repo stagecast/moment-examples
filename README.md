@@ -47,6 +47,6 @@ Steps to get started:
 
 This folder contains:
 - Color Moment: a simple standalone moment to get you started. The moment is in plain Javascript.
-- Messaging Moment: a React.js based Moment that uses websockets and user states.
+- Treasure Hunt Moment: a Vue.js based Moment that uses global and user state.
 
 

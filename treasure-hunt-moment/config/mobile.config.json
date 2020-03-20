@@ -1,0 +1,204 @@
+[{
+  "fieldGroup": [{
+    "key": "quests",
+    "type": "repeat",
+    "defaultValue": [{
+      "id": "option0",
+      "image": "",
+      "imageLink": "",
+      "name": "Quest 1",
+      "question": "Visit London...",
+      "answers": "32,thirtytwo,thirty two"
+    }, {
+      "id": "option1",
+      "image": "",
+      "imageLink": "",
+      "name": "Quest 2",
+      "question": "Visit Vienna...",
+      "answers": "15,fifteen"
+
+    }],
+    "fieldArray": {
+      "templateOptions": {
+        "btnText": "Add Quest",
+        "entryTitle": "Quest",
+        "entryTitleType": "title",
+        "minLength": 1, 
+        "maxLength": 10
+      },
+      "fieldGroup": [{
+        "fieldGroupClassName": "row",
+        "wrappers": [
+          "group-box"
+        ],
+        "templateOptions": {
+          "wrapperTitle": ""
+        },
+        "fieldGroup": [
+          {
+            "key": "name",
+            "type": "input",
+            "className": "col-sm-12",
+            "templateOptions": {
+              "label": "Title",
+              "type": "text",
+              "required": true,
+              "placeholder": "Type in the quest name"
+            }
+          },
+          {
+            "key": "question",
+            "type": "input",
+            "className": "col-sm-12",
+            "templateOptions": {
+              "label": "Question",
+              "required": true,
+              "type": "text",
+              "placeholder": "Type in the question"
+            }
+          }, {
+            "key": "image",
+            "type": "image-input",
+            "className": "col-sm-12",
+            "defaultValue": [],
+            "wrappers": ["form-field"],
+            "templateOptions": {
+              "label": "Add an image",
+              "multiple": false,
+              "deleteImg": false,
+              "maxFiles": 1,
+              "id": "quest-img-uploader"
+            }
+          }, {
+            "key": "imageLink",
+            "type": "input",
+            "className": "col-sm-12",
+            "defaultValue": "",
+            "wrappers": [
+              "form-field"
+            ],
+            "templateOptions": {
+              "type": "url",
+              "label": "Link your image",
+              "placeholder": "https://www.example.com/image/id",
+              "description": "Copy-paste a website link the image referst to."
+            },
+            "expressionProperties": {
+              "templateOptions.disabled": "!model.image || !model.image.length === 0"
+            },
+            "validators": {
+              "validation": ["secureUrl"]
+            }
+          }, {
+            "key": "answers",
+            "type": "input",
+            "className": "col-sm-12",
+            "wrappers": ["form-field"],
+            "templateOptions": {
+              "required": true,
+              "type": "text",
+              "label": "Answers",
+              "placeholder": "answer one, answerone, answer 1",
+              "description": "You can type in several answers by separating them with a comma."
+            }
+          }
+        ]
+      }]
+    }
+  }]
+},
+{
+  "wrappers": [
+    "group-box"
+  ],
+  "templateOptions": {
+    "wrapperTitle": "Prize Set Up"
+  },
+  "fieldGroup": [{
+    "key": "prizeImage",
+    "defaultValue": [],
+    "type": "image-input",
+    "wrappers": ["form-field"],
+    "templateOptions": {
+      "label": "Add a prize image",
+      "required": true,
+      "multiple": false,
+      "deleteImg": false,
+      "maxFiles": 1,
+      "id": "prize-img-uploader"
+    }
+  }, {
+    "key": "prizeDescriptionHeadline",
+    "defaultValue": "You can win a prize",
+    "type": "input",
+    "wrappers": [
+      "form-field"
+    ],
+    "templateOptions": {
+      "label": "Headline",
+      "required": true,
+      "type": "text",
+      "placeholder": "Type in the title"
+    }
+  }, {
+    "key": "prizeDescriptionText",
+    "defaultValue": "This is a description of the prize",
+    "type": "textarea",
+    "wrappers": ["form-field"],
+    "templateOptions": {
+      "label": "Description",
+      "rows": 3,
+      "placeholder": "Write a brief description here..."
+    }
+  }, {
+    "key": "claimButtonLink",
+    "defaultValue": "",
+    "type": "input",
+    "wrappers": [
+      "form-field"
+    ],
+    "templateOptions": {
+      "type": "url",
+      "label": "Link to prize",
+      "placeholder": "https://www.example.com/prize/id",
+      "description": "The fan who wins a prize gets directed to the link you set above."
+    },
+    "validators": {
+      "validation": ["secureUrl"]
+    }
+  }]
+}, {
+  "wrappers": [
+    "group-box"
+  ],
+  "templateOptions": {
+    "wrapperTitle": "Treasure Hunt Styles"
+  },
+  "fieldGroup": [{
+    "key": "backgroundImage",
+    "defaultValue": [],
+    "type": "image-input",
+    "wrappers": ["form-field"],
+    "templateOptions": {
+      "label": "Moment background image",
+      "required": false,
+      "multiple": false,
+      "deleteImg": false,
+      "maxFiles": 1,
+      "id": "bg-img-uploader"
+    }
+  },{
+    "key": "resultBackgroundImage",
+    "defaultValue": [],
+    "type": "image-input",
+    "wrappers": ["form-field"],
+    "templateOptions": {
+      "label": "Background Image",
+      "required": false,
+      "multiple": false,
+      "deleteImg": false,
+      "maxFiles": 1,
+      "id": "result-bg-img-uploader"
+    }
+  }]
+}]

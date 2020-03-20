@@ -1,0 +1,22 @@
+[{
+    "wrappers": [
+      "group-box"
+    ],
+    "templateOptions": {
+      "wrapperTitle": "General Settings"
+    },
+    "fieldGroup": [{
+      "key": "resultText",
+      "defaultValue": "Participate in the Treasure Hunt now and win a prize.",
+      "type": "input",
+      "wrappers": [
+        "form-field"
+      ],
+      "templateOptions": {
+        "label": "Headline",
+        "required": true,
+        "type": "text",
+        "placeholder": "Type in the title"
+      }
+    }]
+  }]

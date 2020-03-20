@@ -1,0 +1,11 @@
+- manifest.json
+- config
+  - mobile.config.json
+  - results.config.json
+- src
+  - mobile
+    - index.html
+    - ... your other files
+  - results
+    - index.html
+    - ... your other files
