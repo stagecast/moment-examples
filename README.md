@@ -13,7 +13,7 @@ Currently we don't support an open development process, so consider this documen
 
 Steps to get started: 
 - GET THE CONFIG DATA
-    - Crete a Stagecast Account by going to https://staging.stagecast.se
+    - Crete a Stagecast Account by going to https://stagecast.se
     - Create an Event and copy the event id you see in the launchpad
     - Via console: 
     ```
